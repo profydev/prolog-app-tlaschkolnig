@@ -32,7 +32,11 @@ describe("Sidebar Navigation", () => {
 
       cy.get("nav")
         .contains("Support")
-        .should("have.attr", "href", "/dashboard/Support");
+        .should(
+          "have.attr",
+          "href",
+          "mailto:support@prolog-app.com?subject=Support%20Request:",
+        );
     });
 
     it("is collapsible", () => {
